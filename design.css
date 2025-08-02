@@ -10,6 +10,7 @@ body {
     min-height: 100vh;
     background-color: white;
     font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -19,37 +20,58 @@ body {
     background-color: red;
     padding: 20px 20px;
 }
-.logo {
-    color: white;
-    font-size: 24px;
-}
-.nav-list {
-    list-style: none;
-    display: flex;
-}
 
-.nav-list li {
-    margin: 0 15px;
-}
-.nav-list a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;;
-}
-.nav-list a:hover {
-    color: #f0a500;
-}
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
 .bar {
     height: 3px;
     width: 25px;
     background-color: white;
     margin: 3px 0;
 }
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.logo {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+}
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.nav-list a:hover {
+    color: #4CAF50;
+}
+
+.hamburger {
+    /* display: none;
+    flex-direction: column;
+    cursor: pointer; */
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+            z-index: 101;
+}
+
+ .hamburger span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
 
 .footer {
     width: 100%;
@@ -98,26 +120,34 @@ body {
 
 .box{
     margin-right: 5px;
-    height: 300px; /* 80px */
-    line-height: 40px; /* 40px */
+    height: 300px; 
+    line-height: 40px; 
    
 }
 .text p {
-    /*
-    margin-left: 20%;
-    margin-right: 20%; */
     margin: 10% auto;
-    width: 80%;
+    width: 90%;
     display: flex;
     margin-top: 5%;
     align-items: center;
     text-align: center;
-    color: white;
+    color: black;
     font-size: 20px;;
 }
 
+.newcontainer {
+    border: none;
+    margin: 50px auto 90px auto;
+    width: 530px;
+    background-color: whitesmoke;
+    padding: 40px 40px;
+    border-radius: 50px;
+    /* box-shadow: 0 5px 5px black; */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
 .container {
-  
     border: none;
     margin: 50px auto 90px auto;
     width: 530px;
@@ -126,13 +156,13 @@ body {
     border-radius: 50px;
     box-shadow: 0 5px 5px black;
     text-align: center;
-    margin-bottom: 90px;
 }
+
 
 h1{
     color: white;
-    font-size: 30px; /* 30px */
-    margin-bottom: 26px; /* 20px */
+    font-size: 30px; 
+    margin-bottom: 26px; 
     font-weight: bold;
 }
 
@@ -177,23 +207,67 @@ textarea::placeholder {
 
 @media (max-width: 768px) {
     
-    .nav-list {
+   /* .nav-list {
         display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 45px;
+        flex-direction: column; 
+        width: 35%;
+        position: absolute; 
         align-items: center;
+        line-height: 50px;
+        top: 50px;
         left: 0;
         background-color: red;
         font-size: 20px;
+        transition: left 0.5s ease;
+    } */
+    .nav-list {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 70%;
+                height: 100vh;
+                background-color: #333;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: left 0.5s ease;
+                padding: 2rem 0;
     }
+
+    .nav-list li {
+        font-size: 0 18px;
+         margin: 1rem 0;
+    }
+
     .nav-list.active {
         display: flex;
+        left: 0;
+        padding: 80px 100px;
     }
-    .menu-toggle {
+
+    .hamburger.active span:nth-child(2) {
+                opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(1) {
+                transform: translateY(9px) rotate(45deg);
+    }
+     
+    .hamburger.active span:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg);
+    }
+    .hamburger{
         display: flex;
+        order: -1;
+        margin-left: 0;
     }
+
+    .logo {
+        color: white;
+        font-size: 26px;
+        font-weight: bold;
+        margin-right: 220px;
+    } 
 
     .text p {
         margin: 5% 5%;
@@ -205,13 +279,19 @@ textarea::placeholder {
         font-size: 0.9rem;
     }
 
+    .newcontainer {
+        width: 80%;
+        padding: 20px;
+        border-radius: 20px;
+    }
+  
     .container {
         padding: 30px 20px;
         border-radius: 30px;
     }
 
     textarea {
-        height: 150px;
+        height: 210px;
         font-size: 14px;
     }
 
@@ -240,3 +320,4 @@ textarea::placeholder {
         font-size: 0.9rem;
     }
 }
+

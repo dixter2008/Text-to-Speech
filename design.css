@@ -266,7 +266,7 @@ textarea::placeholder {
         color: white;
         font-size: 26px;
         font-weight: bold;
-        margin-right: 200px;
+        margin-right: 180px;
     } 
 
     .text p {
@@ -320,5 +320,6 @@ textarea::placeholder {
         font-size: 0.9rem;
     }
 }
+
 
 

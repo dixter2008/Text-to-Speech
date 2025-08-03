@@ -8,7 +8,7 @@ body {
     padding: 0;
     width: 100%;
     min-height: 100vh;
-    background-color: blue; /* change color "white" */
+    background-color: white; /* change color "white" */
     font-family: "Poppins", sans-serif;
     overflow-x: hidden;
 }
@@ -320,6 +320,7 @@ textarea::placeholder {
         font-size: 0.9rem;
     }
 }
+
 
 
 

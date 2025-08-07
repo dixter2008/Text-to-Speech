@@ -190,7 +190,7 @@ line-height: 1.6;
         color: white;
         font-size: 28px; /* logo font size */
         font-weight: bold;
-        margin-right: 200px; /* space between logo and hamburger */
+        margin-right: 180px; /* space between logo and hamburger */
     } 
 
     .footer {
@@ -249,3 +249,4 @@ line-height: 1.6;
         line-height: 1.6;
     }
 }
+

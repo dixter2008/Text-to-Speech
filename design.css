@@ -198,6 +198,15 @@ textarea::placeholder {
     cursor: pointer;
 }
 
+.output-box {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    white-space: pre-wrap;
+}
+
 @media (max-width: 1024px) {
     .container {
         width: 80%;
@@ -320,6 +329,7 @@ textarea::placeholder {
         font-size: 0.9rem;
     }
 }
+
 
 
 

@@ -7,8 +7,7 @@
         <link rel="stylesheet" href="homedesign.css">
     </head>
 <body>
-    <!--Navigation Bar po-->
-     <nav class="navbar">
+    <nav class="navbar">
         <p class="logo">Text To Speech</p>
         <div class="hamburger">
             <span class="bar"></span>
@@ -16,37 +15,32 @@
             <span class="bar"></span>
         </div>  
         <ul class="nav-list">
-            <li><a href="">Home</a></li>
+            <li><a href="home.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <div class="newcontainer">
-        <div class="text">
-            <p>
-                    LUISIANO is a free online text-to-speech (TTS) tool that turns written text into spoken words and summarizes it for you. Simply input you text, and it will summarizes the written text and converts it into spoken words. Perfect for students who prefer auditory learning or anyone needing text aloud
-               </p>
-        </div>
-        </div>
-        
-                    <div class="container">
+        <div class="container">
             <div class="box">
                 <textarea id="text-input" placeholder="Input or paste text"></textarea>
                 <button id="generate-btn" class="btn paste text">Generate Speech</button>
             </div>
-                <div id="output" class="output-box"></div>
+            <div>
+                <textarea id="output" class="output-box" readonly></textarea>
+            </div>
        </div>
-       <footer class="footer">
+
+    <footer class="footer">
         <div class="footer-column">
             <h3>Text To Speech</h3>
-            <p>Description:  </p>
+                <p> Description: LUISIANO is a free online text-to-speech (TTS) tool that turns written 
+                    text into spoken words and summarizes it for you. Simply input you text, and it will
+                    summarizes the written text and converts it into spoken words. Perfect for students 
+                    who prefer auditory learning or anyone needing text aloud.
+                </p>
         </div>
-    <p class="footer-bottom">
-        © 2025 Text to Speech. All rights reserved.
-    </p>
-</footer>
+        <p class="footer-bottom"> © 2025 Text to Speech. All rights reserved. </p>
+    </footer>
 </body>
-    <script src="bodyscript.js"></script>
+    <script src="homescript.js"></script>
 </html>
-
-

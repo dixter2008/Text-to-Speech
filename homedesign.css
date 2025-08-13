@@ -239,7 +239,7 @@ textarea::placeholder {
 
     .logo {
         color: white;
-        font-size: 28px; /* logo font size */
+        font-size: 35px; /* logo font size */
         font-weight: bold;
         margin-right: 170px; /* space between logo and hamburger */
     } 
@@ -285,4 +285,5 @@ textarea::placeholder {
         font-size: 0.9rem;
     }
 }
+
 

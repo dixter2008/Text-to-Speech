@@ -1,11 +1,12 @@
 document.getElementById('generate-btn').addEventListener('click', () => {
     const text = document.getElementById('text-input').value;
     const outputBox = document.getElementById('output');
-    
-    if (text.trim() === "") {
-        outputBox.textContent = "Please enter some text.";
+    if (text.trim() !== "") {
+        outputBox.value = text; // Show the text in the output box
+        const utterance = new SpeechSynthesisUtterance(text);
+        window.speechSynthesis.speak(utterance);
     } else {
-        outputBox.textContent = text;
+        outputBox.value = "Please enter some text.";
     }
 });
 

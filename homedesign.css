@@ -154,7 +154,7 @@ textarea {
     border-radius: 12px;
     resize: none;
     outline: none;
-    margin-bottom: 30px;
+    margin-bottom: 15px; 
     color: #333;
     background-color: #fff;
 }
@@ -163,17 +163,33 @@ textarea::placeholder {
     color: #999;
 }
 
-.btn {
-    width: 100%;
+.sumbtn {
+    width: 50%;
+    padding: 14px; 
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(21, 221, 15, 0.834);
+    margin-right: 250px;
+    color: black;
+    cursor: pointer;
+}
+
+.genbtn {
+    width: 50%;
     padding: 14px;
     border: none;
     border-radius: 12px;
     font-size: 16px;
     font-weight: bold;
     background-color: #36b3ff;
+    margin-top: auto; /* */
+    margin-left: 250px;
     color: black;
     cursor: pointer;
 }
+
 
 .output-box {
     margin-top: 20px;
@@ -181,7 +197,7 @@ textarea::placeholder {
     border: 1px solid #ccc;
     background-color: #f9f9f9;
     font-size: 16px;
-    white-space: pre-wrap;
+    white-space: pre-wrap; 
     pointer-events: none;
 }
 
@@ -285,5 +301,4 @@ textarea::placeholder {
         font-size: 0.9rem;
     }
 }
-
 

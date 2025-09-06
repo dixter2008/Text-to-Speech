@@ -4,7 +4,8 @@ document.getElementById('generate-btn').addEventListener('click', () => {
     if (text.trim() !== "") {
         outputBox.value = text; // Show the text in the output box
         const utterance = new SpeechSynthesisUtterance(text);
-        window.speechSynthesis.speak(utterance);
+        utterance.lang = 'en-gb';
+        speechSynthesis.speak(utterance);
     } else {
         outputBox.value = "Please enter some text.";
     }

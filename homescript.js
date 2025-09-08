@@ -9,14 +9,24 @@
         });
 
 document.getElementById('summarize-btn').addEventListener('click', () => {
-    const text = document.getElementById('text-input').value;
+
+    const text = document.getElementById('text-input').value.trim();
     const outputBox = document.getElementById('output');
+
+    const offensiveWords = ["Putanginamo", "tangina mo", "Shet", "Motherfucker"];
+    const lowertext = text.toLowerCase();
     
-    if (text.trim() === "") {
-        outputBox.textContent = "Please enter some text.";
-    } else {
-        outputBox.textContent = text;
-    }
+    if(text !== "") {
+        if (offensiveWords.some(word => lowertext.includes(word))) {
+            outputBox.textContent = "Offensive language detected. Please enter appropriate text.";
+        } 
+        else {
+            outputBox.textContent = text;
+        } 
+      } else {
+        outputBox.textContent = "Please enter some text to summarize.";
+      }
+    
 });
 
 document.getElementById('generate-btn').addEventListener('click', () => {
